@@ -1,5 +1,16 @@
 from flask import Flask
+from Users import *
+from Products import *
+from Clients import *
+from functions import *
+
+
+
+
+
+
 app = Flask(__name__)
+
 
 @app.route('/')
 def index():

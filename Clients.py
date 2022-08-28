@@ -4,3 +4,5 @@ class Client:
         self.name = name
         self.lastName = lastName
         self.cart = cart
+
+    
