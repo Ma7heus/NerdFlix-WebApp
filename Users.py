@@ -12,6 +12,6 @@ def getUser(tipo):
     elif tipo == "key":
         listUsers = list(dados.keys())
     return listUsers
-
+    
 
 
