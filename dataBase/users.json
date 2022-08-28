@@ -3,5 +3,11 @@
     "name": "Matheus",
     "nickName": "mhb",
     "password": "uabalabadubidubi"
+  },
+
+  "2":{
+    "name": "Pedro",
+    "nickName": "pedrinho",
+    "password": "abc123"
   }
 }

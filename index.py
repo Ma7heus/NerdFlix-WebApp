@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, redirect, request
 from Users import *
 from Products import *
 from Clients import *
@@ -13,8 +13,18 @@ def index():
 
 @app.route('/login')
 def login():
-    title = "FACA O SEU LOGIN"
+    title = "FAÇA O SEU LOGIN"
+    proxima = request.args.get('proxima')
     return render_template("login.html",title=title)
+
+@app.route('/autenticar', method=['POST', ])
+def autenticar():
+    
+
+
+    return redirect('/login')
+
+
 
 
 

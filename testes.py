@@ -4,6 +4,7 @@ import json
 import os
 
 os.system("clear || cls")
-
-listUsers = getUser("value")
-print(listUsers)
+a = Users.getName()
+b = Users.getNickName()
+c = Users.getPassword()
+print(a,b,c)
