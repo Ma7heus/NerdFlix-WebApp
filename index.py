@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 from flask import Flask, render_template, redirect, request, session, url_for, flash
 from Users import *
 from Products import *
@@ -10,6 +9,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
+    title = "BEM VINDO AO NERDFLIX!"
     return '<h1>Bem vindo ao NerdFlix!</h1>'
 
 @app.route('/login')
@@ -28,33 +28,17 @@ def autenticar():
             return redirect('/')
         else:
             return redirect('login')
-=======
-from flask import Flask, render_tamplate, redirect
-from Clients import *
-from Products import *
-from Users import *
 
-app = Flask(__name__)
-
-@pp.route('/')
-def index():
-    title = "Bem vindo ao NerdFlix!"
-    return render_template("index.html", title=title)
->>>>>>> 16a9bbb3cb1711c3af44da74c8647fb986779ad4
-
-
-
-
-<<<<<<< HEAD
-
-
+@app.route('/allproducts')
+def allproducts():
+    titulo = "PRODUCTS"
+    listProducts = Products.getAllProducts("value")
+    return render_template('products.html',titulo = titulo,listGames = listProducts)
 
 
 
 app.run(host='0.0.0.0', port=8080, debug=True)
-=======
-app.run(debuger=True)
->>>>>>> 16a9bbb3cb1711c3af44da74c8647fb986779ad4
+
 
 
 
