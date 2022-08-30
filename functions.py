@@ -1,4 +1,6 @@
+from Users import *
 import json
+
 
 def getData(arquivo):
     dataType = "" 
@@ -15,3 +17,7 @@ def getData(arquivo):
         dados = json.load(DB)
         DB.close()
     return dados
+
+
+
+

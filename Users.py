@@ -37,3 +37,16 @@ class Users:
             listPassword.append(password)
         return listPassword
 
+    def getUserPassword(nameUser):
+        listPassword = Users.getPassword()
+        listUsers = Users.getNickName()
+        indice = 0
+        userPassword = None
+        for i in listUsers:
+            if i == nameUser:
+                break
+            indice +=1
+        userPassword = listPassword[indice]
+
+        return userPassword
+

@@ -1,4 +1,4 @@
-from flask import Flask, render_template, redirect, request
+from flask import Flask, render_template, redirect, request, session, url_for, flash
 from Users import *
 from Products import *
 from Clients import *
@@ -14,15 +14,20 @@ def index():
 @app.route('/login')
 def login():
     title = "FAÇA O SEU LOGIN"
-    proxima = request.args.get('proxima')
+    #proxima = request.args.get('proxima')
     return render_template("login.html",title=title)
 
-@app.route('/autenticar', method=['POST', ])
+@app.route('/autenticar', methods=['POST', ])
 def autenticar():
-    
+    listNickName = Users.getNickName()
+    userName = request.form['userName']
+    if userName in listNickName:
+        userPassword = Users.getUserPassword(userName)
+        if request.form['userPassword'] == userPassword:
+            return redirect('/')
+        else:
+            return redirect('login')
 
-
-    return redirect('/login')
 
 
 
