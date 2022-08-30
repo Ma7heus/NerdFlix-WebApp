@@ -1,14 +1,11 @@
-<<<<<<< HEAD
 from functions import *
-=======
->>>>>>> 16a9bbb3cb1711c3af44da74c8647fb986779ad4
+
 class Users:
     def __init__(self, name, nickName, password):
         self.name = name
         self.password = password
         self.nickName = nickName
 
-<<<<<<< HEAD
     def getUser(tipo):
         dados = getData("users")
         if tipo == "value":
@@ -54,5 +51,3 @@ class Users:
 
         return userPassword
 
-=======
->>>>>>> 16a9bbb3cb1711c3af44da74c8647fb986779ad4

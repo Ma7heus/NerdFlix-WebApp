@@ -1,7 +1,7 @@
 from Users import *
 import json
 
-
+# function that get dara on database files
 def getData(arquivo):
     dataType = "" 
     if arquivo == "users":
