@@ -1,11 +1,10 @@
 {
-  "1":{
+  "1": {
     "name": "Matheus",
     "nickName": "mhb",
     "password": "123"
   },
-
-  "2":{
+  "2": {
     "name": "Pedro",
     "nickName": "pedrinho",
     "password": "abc123"
