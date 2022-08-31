@@ -7,6 +7,20 @@
     <link rel="stylesheet" href= "{{ url_for('static', filename='all.css') }}">
 </head>
 <body>
+    <div class="header">
+        <header>
+            <tr>
+                <div class="a">
+                    <td><h1> JOGO TECA</h1></td>
+                </div>
+                <div class="b">                
+                    <td><button class="btn btn-primary" type="submit">Entrar</button></td>
+                    <td><button class="btn btn-secondary" type="submit">Logout</button></td>
+                </div>    
+            </tr>            
+        </header>
+    </div>
+        
     <div class="container">
         {% with messages = get_flashed_messages() %}
             {% if messages %}

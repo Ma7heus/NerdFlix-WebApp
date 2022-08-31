@@ -19,8 +19,6 @@ def login():
     return render_template("login.html",title=title)
 
 @app.route('/autenticar', methods=['POST', ])
-
-
 def autenticar():
     listNickName = Users.getNickName()
     userName = request.form['userName']
@@ -37,8 +35,6 @@ def allproducts():
     listProducts = Products.getAllProducts("value")
     listCodes = Products.getAllProducts("key")
     return render_template('products.html',titulo = titulo,listProducts = listProducts, listCodes = listCodes)
-
-
 
 app.run(host='0.0.0.0', port=8080, debug=True)
 

@@ -1,20 +1,22 @@
 {% extends 'template.html' %}
 {% block conteudo %}
         <table class="table table-striped table-responsive table-bordered">
+            <p>
+                <label><strong>Digite o tipo que deseja:</strong></label>
+                <input class="form-control" type="text" name="typeProduct">
+                <button class=" btn btn-primary" type="submit">Buscar</button>
+            </p>
             <thead class="thead-default">
-                <tr>
-                    
+                <tr>                    
                     <th>Name</th>
                     <th>Type</th>
                     <th>Value</th>
-                    <th>Available</th>
+                    <th>Availability</th>
                 </tr>
             </thead>
-            <tbody>
-                {% for product in listProducts %}
-                
-                    <tr>
-                        
+            <tbody>                
+                {% for product in listProducts %}                
+                    <tr>                        
                         <td>{{ product['nome'] }}</td>
                         <td>{{ product['tipo'] }}</td>
                         <td> R$ {{ product['preco'] }}</td>
